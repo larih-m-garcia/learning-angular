@@ -1,0 +1,18 @@
+
+<div class="container">
+    <h4>3. Cadastro Aluno</h4>
+    <form action="post">
+        <div class="form-control">
+            <label for="ra">RA</label>
+            <input [(ngModel)]="ra" name="ra" type="text" class="form-control" id="ra">
+            <label for="nome">Nome</label>
+            <input [(ngModel)]="nome" name="nome" type="text" class="form-control" id="nome">
+            <label for="email">Email</label>
+            <input [(ngModel)]="email" name="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+            <label for="telefone">Telefone</label>
+            <input [(ngModel)]="phone" name="phone" type="phone" class="form-control" id="telefone" placeholder="15999998888">
+            <button (click)="verificarCampos()" class="btn btn-dark mt-3" type="submit" id="btnsubmit">Cadastrar</button>
+            <p [ngModel]="verificacao" [ngStyle]="{'color': sucesso ? 'green' : 'red'}" id="btnsubmit" class="form-text d-inline ps-3">{{verificacao}}</p>
+        </div>
+    </form>
+</div>

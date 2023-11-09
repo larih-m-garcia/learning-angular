@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Lista de Tarefas</h1>
+    <ul class="mt-5">
+        <li *ngFor="let tarefa of listaTarefas, index as i">
+            <div class="row mt-2">
+                <div class="col-3 mt-2">
+                    <h5 [ngStyle]="{'text-decoration': tarefa.concluida ? 'line-through' : 'none'}">{{tarefa.descricao}}</h5>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-light" (click)="mudarStatus(i)">Concluir</button>
+
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

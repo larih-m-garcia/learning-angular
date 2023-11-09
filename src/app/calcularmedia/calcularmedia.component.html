@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h4>1. Calcular Média</h4>
+    <div class="row">
+        <div class="col-md-2">
+            <label class="form-label">Nota AC1</label>
+            <input [(ngModel)]="ac1" type="number" class="form-control">
+        </div>
+        <div class="col-md-2">
+            <label class="form-label">Nota AC2</label>
+            <input [(ngModel)]="ac2" type="number" class="form-control">
+        </div>
+        <div class="col-md-2">
+            <label class="form-label">Nota AG</label>
+            <input [(ngModel)]="ag" type="number" class="form-control">
+        </div>
+        <div class="col-md-2">
+            <label class="form-label">Nota AF</label>
+            <input [(ngModel)]="af" type="number" class="form-control">
+        </div>
+        <div class="col-md-2">
+            <button style="margin-top: 30px;" class="btn btn-dark" (click)="calcularMedia()">Calcular Média</button>
+        </div>
+        <div class="col-md-1    ">
+            <label class="form-label">Resultado</label>
+            <input [ngModel]="media" type="number" class="form-control">
+        </div>
+        <div class="col-md-1">
+            <h5 [ngStyle]="{'color': aprovado ? 'green' : 'red'}" style="margin-top: 35px;">{{getSituacao()}}</h5>
+        </div>
+    </div>
+</div>
